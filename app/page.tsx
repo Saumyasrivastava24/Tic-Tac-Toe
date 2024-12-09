@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState(true)
-  const [winner, setWinner] = useState(null)
+  const [winner, setWinner] = useState<string | null>(null)
 
   useEffect(() => {
     const calculatedWinner = calculateWinner(board)
